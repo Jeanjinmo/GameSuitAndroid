@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_tittle"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@raw/tittle" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="111dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="281dp" />
+
+    <TextView
+        android:id="@+id/tv_pemain_satu"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:text="Pemain 1"
+        android:textColor="#03A9F4"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/guideline1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_tittle" />
+
+    <TextView
+        android:id="@+id/tv_com"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="8dp"
+        android:text="COM"
+        android:textColor="#03A9F4"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/img_tittle" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_batu_pemain"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:tintMode="multiply"
+        app:layout_constraintEnd_toEndOf="@id/guideline1"
+        app:layout_constraintStart_toStartOf="@+id/tv_pemain_satu"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pemain_satu"
+        app:srcCompat="@drawable/batu" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_kertas_pemain"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline1"
+        app:layout_constraintStart_toStartOf="@+id/img_batu_pemain"
+        app:layout_constraintTop_toBottomOf="@+id/img_batu_pemain"
+        app:srcCompat="@drawable/kertas" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_gunting_pemain"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline1"
+        app:layout_constraintStart_toStartOf="@+id/img_kertas_pemain"
+        app:layout_constraintTop_toBottomOf="@+id/img_kertas_pemain"
+        app:srcCompat="@drawable/gunting" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_batu_com"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_com"
+        app:srcCompat="@drawable/batu" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_kertas_com"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/img_batu_com"
+        app:srcCompat="@drawable/kertas" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_gunting_com"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/img_kertas_com"
+        app:srcCompat="@drawable/gunting" />
+
+    <TextView
+        android:id="@+id/tv_result_win"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:background="#8BC34A"
+        android:fontFamily="@font/balsamiqsans_regular"
+        android:padding="8dp"
+        android:rotation="350"
+        android:text="Pemain 1 Menang"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/img_tittle" />
+
+    <TextView
+        android:id="@+id/tv_result_VS"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/balsamiqsans_regular"
+        android:padding="8dp"
+        android:rotation="350"
+        android:text="VS"
+        android:textAlignment="center"
+        android:textColor="#F44336"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/img_tittle" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_restart"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/refresh" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

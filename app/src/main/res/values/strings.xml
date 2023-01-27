@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">GameSuitAndroid</string>
+    <string name="pemain_win">Pemain 1 Menang</string>
+    <string name="computer_win">Komputer Menang</string>
+    <string name="draw">DRAW</string>
+
+
+    <integer-array name="gambar">
+        <item>@drawable/batu</item>
+        <item>@drawable/gunting</item>
+        <item>@drawable/kertas</item>
+    </integer-array>
+</resources>
